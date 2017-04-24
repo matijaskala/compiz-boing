@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<compiz>
+	<plugin name="boing" useBcop="true">
+		<short>Boing</short>
+		<long>Boing for Compiz</long>
+		<category>Extras</category>
+		<deps>
+			<relation type="after">
+				<plugin>png</plugin>
+				<plugin>svg</plugin>
+				<plugin>jpeg</plugin>
+			</relation>
+		</deps>
+		<display>
+			<group>
+				<short>Settings</short>
+				<option name="num_leaves" type="int">
+					<short>Number Of balls</short>
+					<long>Number of balls</long>
+					<default>16</default>
+					<min>0</min>
+					<max>10000</max>
+				</option>
+				<option name="leaf_size" type="float">
+					<short>Size Of balls</short>
+					<long>Size of balls</long>
+					<default>100.0</default>
+					<min>0.0</min>
+					<max>100.0</max>
+					<precision>0.1</precision>
+				</option>
+				<option name="wind_speed" type="int">
+					<short>Leaf Speed</short>
+					<long>Speed of falling/blowing leaves</long>
+					<default>72</default>
+					<min>0</min>
+					<max>100</max>
+				</option>
+				<option name="autumn_update_delay" type="int">
+					<short>Update Delay</short>
+					<long>Delay (in ms) between screen updates. Decreasing this value may make leaves fall more smoothly, but will also increase CPU usage.</long>
+					<default>21</default>
+					<min>10</min>
+					<max>200</max>
+				</option>
+				<option name="screen_boxing" type="int">
+					<short>Screen Boxing</short>
+					<long>How far outside the screen resolution leaves can be before being removed. Needed because of FOV.</long>
+					<default>400</default>
+					<min>-2000</min>
+					<max>2000</max>
+				</option>
+				<option name="screen_depth" type="int">
+					<short>Screen Depth</short>
+					<long>How deep into the screen leaves can be drawn before being removed</long>
+					<default>1000</default>
+					<min>0</min>
+					<max>2000</max>
+				</option>
+				<option name="leaves_over_windows" type="bool">
+					<short>Balls Over Windows</short>
+					<long>Balls are drawn above windows</long>
+					<default>false</default>
+				</option>
+				<option name="leaf_rotation" type="bool">
+					<short>Rotate Balls</short>
+					<long>Balls rotate if checked.</long>
+					<default>false</default>
+				</option>
+				<option name="wind_direction" type="int">
+					<short>Wind Direction</short>
+					<long>Select the wind direction</long>
+					<default>0</default>
+					<min>0</min>
+					<max>3</max>
+					<desc>
+						<value>0</value>
+						<name>No Wind</name>
+					</desc>
+					<desc>
+						<value>1</value>
+						<name>Up</name>
+					</desc>
+					<desc>
+						<value>2</value>
+						<name>Left</name>
+					</desc>
+					<desc>
+						<value>3</value>
+						<name>Right</name>
+					</desc>
+				</option>
+			</group>
+			<group>
+				<short>Textures</short>
+				<option name="leaf_textures" type="list">
+					<short>Ball Textures</short>
+					<long>Ball textures</long>
+					<hints>file;image;</hints>
+					<type>string</type>
+					<default>
+					<value>ball-00.png</value>
+					<value>ball-01.png</value>
+					<value>ball-02.png</value>
+					<value>ball-03.png</value>
+					<value>ball-04.png</value>
+					<value>ball-05.png</value>
+					<value>ball-06.png</value>
+					<value>ball-07.png</value>
+					<value>ball-08.png</value>
+					<value>ball-09.png</value>
+					<value>ball-10.png</value>
+					<value>ball-11.png</value>
+					<value>ball-12.png</value>
+					<value>ball-13.png</value>
+					<value>ball-14.png</value>
+					<value>ball-15.png</value>
+					</default>
+				</option>
+			</group>
+			<group>
+				<short>Debug</short>
+				<option name="use_blending" type="bool">
+					<short>Enable Blending</short>
+					<long>Enables alpha blending of balls.</long>
+					<default>true</default>
+				</option>
+				<option name="use_textures" type="bool">
+					<short>Enable Textures</short>
+					<long>Enables textured balls. If not selected, color gradients are used.</long>
+					<default>true</default>
+				</option>
+			</group>
+			<group>
+				<short>Key Bindings</short>
+				<option name="toggle_key" type="key">
+					<short>Toggle Boing</short>
+					<long>Boing toggle key</long>
+					<allowed key="true"/>
+					<default>
+						<key>&lt;Super&gt;F11</key>
+					</default>
+				</option>
+			</group>
+		</display>
+	</plugin>
+</compiz>
+
