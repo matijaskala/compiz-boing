@@ -126,12 +126,6 @@ static void
 boingThink (LeafScreen *ss,
 	   Leaf  *sf)
 {
-    int boxing;
-    int texwidth;
-    int texheight;
-
-    boxing = boingGetScreenBoxing (ss->s->display);
-
     float boingSize = boingGetLeafSize (ss->s->display);
 
 sf->x = sf->x + sf->dx;
@@ -139,11 +133,6 @@ sf->x = sf->x + sf->dx;
 sf->velocityY=sf->velocityY+0.1;
 //sf->x = sf->x + sf->velocity;
 sf->y = sf->y + sf->velocityY;
-
-texwidth = &ss->boingTex[sf->frame].width;
-texheight = &ss->boingTex[sf->frame].height;
-//texheight = texheight*(boingSize-100);
-
 
     if (sf->y >= ss->s->height)
 	{
@@ -196,13 +185,6 @@ static void
 boingMove (CompDisplay *d,
 	  Leaf   *sf)
 {
-    float tmp = 1.0f / (100.0f - boingGetWindSpeed (d));
-    int   boingUpdateDelay = boingGetAutumnUpdateDelay (d);
-
-//    sf->x += (sf->xs * (float) boingUpdateDelay) * tmp;
-//    sf->y += (sf->ys * (float) boingUpdateDelay) * tmp;
-//    sf->z += (sf->zs * (float) boingUpdateDelay) * tmp;
-//    sf->ra += ((float) boingUpdateDelay) / (10.0f - sf->rs);
 
 }
 
