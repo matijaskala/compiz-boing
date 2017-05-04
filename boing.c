@@ -120,7 +120,6 @@ typedef struct _LeafScreen
 
 /* some forward declarations */
 static void initiateLeaf (LeafScreen * ss, Leaf * sf);
-static void boingMove (CompDisplay *d, Leaf * sf);
 
 static void
 boingThink (LeafScreen *ss,
@@ -177,15 +176,6 @@ sf->y = sf->y + sf->velocityY;
         sf->tempframe = ss->boingTexturesLoaded-1;
 }
     sf->tex = &ss->boingTex[sf->frame];
-
-    boingMove (ss->s->display, sf);
-}
-
-static void
-boingMove (CompDisplay *d,
-	  Leaf   *sf)
-{
-
 }
 
 static Bool
