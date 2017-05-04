@@ -125,12 +125,8 @@ static void
 boingThink (LeafScreen *ss,
 	   Leaf  *sf)
 {
-    float boingSize = boingGetLeafSize (ss->s->display);
-
 sf->x = sf->x + sf->dx;
-//sf->y = sf->y + sf->dy;
 sf->velocityY=sf->velocityY+0.1;
-//sf->x = sf->x + sf->velocity;
 sf->y = sf->y + sf->velocityY;
 
     if (sf->y >= ss->s->height)
@@ -155,13 +151,6 @@ sf->y = sf->y + sf->velocityY;
 	sf->dy = sf->dy * -1;
 	sf->velocityY=-sf->velocityY;
 	}
-
-//	sf->z <= -((float) boingGetScreenDepth (ss->s->display) / 500.0) ||
-//	sf->z >= 1)
-//  {
-//	initiateLeaf (ss, sf);
-//    }
-
 
     sf->tempframe=sf->tempframe+sf->spin;
     sf->frame=sf->tempframe;
