@@ -716,6 +716,18 @@ boingDisplayOptionChanged (CompDisplay        *d,
 		updateLeafTextures (s);
 	}
 	break;
+    case BoingDisplayOptionDefaultEnabled:
+	{
+	    CompScreen *s;
+	    for (s = d->screens; s; s = s->next)
+	    {
+		BOING_SCREEN (s);
+		ss->active = boingGetDefaultEnabled(s->display);
+		ss->displayListNeedsUpdate = TRUE;
+		damageScreen (s);
+	    }
+	}
+	break;
     default:
 	break;
     }
@@ -742,6 +754,7 @@ boingInitDisplay (CompPlugin  *p,
     boingSetLeafSizeNotify (d, boingDisplayOptionChanged);
     boingSetAutumnUpdateDelayNotify (d, boingDisplayOptionChanged);
     boingSetLeafTexturesNotify (d, boingDisplayOptionChanged);
+    boingSetDefaultEnabledNotify (d, boingDisplayOptionChanged);
 
     texOpt = boingGetLeafTexturesOption (d);
     sd->boingTexFiles = texOpt->value.list.value;
