@@ -110,6 +110,11 @@
 					<value>ball-15.png</value>
 					</default>
 				</option>
+				<option name="default_enabled" type="bool">
+					<_short>Enable by default</_short>
+					<_long>Enable boing by default.</_long>
+					<default>false</default>
+				</option>
 			</group>
 			<group>
 				<_short>Debug</_short>
